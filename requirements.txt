@@ -1,6 +1,6 @@
 streamlit
 pandas
-plotly.express
+plotly
 psycopg2
 json
 base64
