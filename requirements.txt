@@ -1,0 +1,8 @@
+streamlit
+pandas
+plotly.express
+psycopg2
+json
+base64
+tempfile
+pdfkit
