@@ -15,13 +15,13 @@ st.set_page_config(layout="wide")
 st.title("Report Builder")
 
 # Step 1: Title, description, logo
-st.sidebar.header("Step 1: Info")
+st.sidebar.header("Report Details")
 report_title = st.sidebar.text_input("Report Title")
 report_desc = st.sidebar.text_area("Report Description")
 logo_file = st.sidebar.file_uploader("Upload Company Logo", type=["png", "jpg"])
 
 # Step 2: SQL query and DB connection
-st.sidebar.header("Step 2: Data")
+st.sidebar.header("Connection details")
 host = st.sidebar.text_input("Host", value="localhost")
 dbname = st.sidebar.text_input("Database", value="mydb")
 user = st.sidebar.text_input("User", value="postgres")
@@ -103,7 +103,7 @@ if st.session_state.get("add_chart") and not df.empty:
             st.session_state["add_chart"] = False
 
 # Step 6: Display report elements
-st.subheader("Final Report")
+st.subheader("Export report")
 for el in st.session_state.report_elements:
     if el["type"] == "table":
         st.dataframe(pd.DataFrame(el["data"]), use_container_width=True)
