@@ -1,8 +1,10 @@
-streamlit
-pandas
-plotly
-psycopg2
 json
 base64
 tempfile
 pdfkit
+streamlit
+pandas
+plotly
+psycopg2-binary
+pdfkit
+kaleido
